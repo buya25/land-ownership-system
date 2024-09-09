@@ -1,0 +1,13 @@
+npm install --save-dev hardhat
+npx hardhat
+npm install --save-dev chai @nomiclabs/hardhat-waffle @nomiclabs/hardhat-ethers ethers
+npx hardhat test
+npm install --save-dev hardhat @nomiclabs/hardhat-ethers ethers chai @nomiclabs/hardhat-etherscan mocha
+npm install @nomiclabs/hardhat-ethers ethers dotenv
+npx hardhat run scripts/deploy.js --network hardhat
+npx hardhat compile
+
+node scripts/deploy.js
+remixd -s ./ --remix-ide https://remix.ethereum.org //open it online
+
+npm install ethers
