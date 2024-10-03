@@ -12,7 +12,7 @@ try {
 const web3 = new Web3(process.env.ETH_NODE_URL);
 
 // Your deployed contract address
-const contractAddress = '0xC94cDaf98ca32767b4EA139E64bAA5E1225E2339';
+const contractAddress = '0x208Be9521d1BBEe0c3F6C23803a78069E830B755';
 
 // Your contract ABI
 const contractAbi = [
@@ -57,7 +57,7 @@ const contract = new web3.eth.Contract(contractAbi, contractAddress);
 async function registerLandParcel(location, size) {
     try {
         const accounts = await web3.eth.getAccounts();
-        const account = accounts[0];  // Select the first account
+        const account = accounts[1];  // Select the first account
 
         console.log('Registering land parcel with location:', location, 'and size:', size);
         console.log('Using account:', account);

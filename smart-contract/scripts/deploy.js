@@ -18,7 +18,7 @@ async function main() {
         try {
             // Request user accounts from MetaMask
             const accounts = await web3.eth.requestAccounts();
-            console.log("Connected account:", accounts[0]);
+            console.log("Connected account:", accounts[1]);
 
             // Replace with your contract's ABI and address
             const contractABI = [
@@ -39,7 +39,7 @@ async function main() {
             const contract = new web3.eth.Contract(contractABI, contractAddress);
             console.log("Contract instance created.");
 
-            const balance = await web3.eth.getBalance(accounts[0]);
+            const balance = await web3.eth.getBalance(accounts[1]);
             console.log(`Wallet balance: ${web3.utils.fromWei(balance, 'ether')} ETH`);
 
             // Register the land parcel
